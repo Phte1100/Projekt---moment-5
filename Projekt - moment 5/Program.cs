@@ -20,14 +20,17 @@ namespace Projekt___moment_5
         while (running)
         {
             Console.Clear();
-            Console.WriteLine("┌────────────────────────────────────────────────────┐");
-            Console.WriteLine("│                     LÅNEAPPEN                      │");
-            Console.WriteLine("├────────────────────────────────────────────────────┤");
-            Console.WriteLine("│ [1] - Gör en ny ansökan                            │");
-            Console.WriteLine("│ [2] - Se gamla ansökningar                         │");
-            Console.WriteLine("│ [3] - Avsluta                                      │");
-            Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.Write("Välj ett alternativ: ");
+Console.WriteLine("┌────────────────────────────────────────────────────┐");
+Console.WriteLine("│                     LÅNEAPPEN                      │");
+Console.WriteLine("├────────────────────────────────────────────────────┤");
+Console.WriteLine("│ Fyll i dina uppgifter och få ett besked om ditt    │");
+Console.WriteLine("│ lån blir godkänt direkt i appen.                   │");
+Console.WriteLine("├────────────────────────────────────────────────────┤");
+Console.WriteLine("│ [1] - Gör en ny ansökan                            │");
+Console.WriteLine("│ [2] - Se gamla ansökningar                         │");
+Console.WriteLine("│ [3] - Avsluta                                      │");
+Console.WriteLine("└────────────────────────────────────────────────────┘");
+Console.Write("Välj ett alternativ: ");
 
                 string choice = Console.ReadLine();
 

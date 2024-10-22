@@ -15,14 +15,17 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [1] - NAMN                                         │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ Skriv ditt namn                                    │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("Skriv ditt namn:");
             string applicantName = Console.ReadLine();
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [2] - Hur mycket vill du låna?                     │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ Du kan ansöka om privatlån mellan 20 000 & 500 000 │");
+            Console.WriteLine("│ SEK. Ange belopp                                   │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("Du kan ansöka om privatlån mellan 20 000 och 500 000 SEK");
             float loanAmount;
             while (!float.TryParse(Console.ReadLine(), out loanAmount) || loanAmount < 20000 || loanAmount > 500000)
             {
@@ -31,8 +34,12 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [3] - Syfte med lånet                              │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Renovering av bostad                         │");
+            Console.WriteLine("│ [2] - Lösa andra lån                               │");
+            Console.WriteLine("│ [3] - Köp av bil                                   │");
+            Console.WriteLine("│ [4] - Övrig konsumtion                             │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Renovering av bostad\n[2] - Lösa andra lån\n[3] - Köp av bil\n[4] - Övrig konsumtion");
             int loanReason;
             while (!int.TryParse(Console.ReadLine(), out loanReason) || loanReason < 1 || loanReason > 4)
             {
@@ -57,8 +64,9 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [4] - Återbetalningstid                            │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ Du kan välja mellan 1-12 år. Ange antal år:        │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("Du kan välja mellan 1-12 år");
             float loanRepay;
             while (!float.TryParse(Console.ReadLine(), out loanRepay) || loanRepay < 1 || loanRepay > 12)
             {
@@ -67,8 +75,12 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [5] - Sysselsättning                               │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Tillsvidareanställning                       │");
+            Console.WriteLine("│ [2] - Egenföretagare                               │");
+            Console.WriteLine("│ [3] - Pensionär                                    │");
+            Console.WriteLine("│ [4] - Arbetssökande                                │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Tillsvidareanställning\n[2] - Egenföretagare\n[3] - Pensionär\n[4] - Arbetssökande");
             int employment;
             while (!int.TryParse(Console.ReadLine(), out employment) || employment < 1 || employment > 4)
             {
@@ -94,8 +106,11 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [6] - Civilstånd                                   │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Gift                                         │");
+            Console.WriteLine("│ [2] - Sambo                                        │");
+            Console.WriteLine("│ [3] - Ensamstående                                 │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Gift\n[2] - Sambo\n[3] - Ensamstående");
             int civilStatus;
             while (!int.TryParse(Console.ReadLine(), out civilStatus) || civilStatus < 1 || civilStatus > 3)
             {
@@ -117,9 +132,11 @@ namespace Projekt___moment_5
             }
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
-            Console.WriteLine("│ [7] - Medsökande                                  │");
+            Console.WriteLine("│ [7] - Medsökande                                   │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Ja                                           │");
+            Console.WriteLine("│ [2] - Nej                                          │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Ja\n[2] - Nej");
             int coApplicant;
             while (!int.TryParse(Console.ReadLine(), out coApplicant) || (coApplicant != 1 && coApplicant != 2))
             {
@@ -138,9 +155,12 @@ namespace Projekt___moment_5
             }
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
-            Console.WriteLine("│ [9] - Boendetyp                                   │");
+            Console.WriteLine("│ [9] - Boendetyp                                    │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Villa                                        │");
+            Console.WriteLine("│ [2] - Bostadsrätt                                  │");
+            Console.WriteLine("│ [3] - Hyresrätt                                    │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Villa\n[2] - Bostadsrätt\n[3] - Hyresrätt");
             int homeType;
             while (!int.TryParse(Console.ReadLine(), out homeType) || homeType < 1 || homeType > 3)
             {
@@ -163,8 +183,10 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [10] - Betalningsanmärkningar                      │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ [1] - Ja                                           │");
+            Console.WriteLine("│ [2] - Nej                                          │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("[1] - Ja\n[2] - Nej");
             int paymentRemarks;
             while (!int.TryParse(Console.ReadLine(), out paymentRemarks) || (paymentRemarks != 1 && paymentRemarks != 2))
             {
@@ -175,8 +197,9 @@ namespace Projekt___moment_5
             Console.Clear();
             Console.WriteLine("┌────────────────────────────────────────────────────┐");
             Console.WriteLine("│ [11] - Andra lån                                   │");
+            Console.WriteLine("├────────────────────────────────────────────────────┤");
+            Console.WriteLine("│ Ange totalsumman i SEK                             │");
             Console.WriteLine("└────────────────────────────────────────────────────┘");
-            Console.WriteLine("Ange totalsumman i SEK:");
             float otherLoans;
             while (!float.TryParse(Console.ReadLine(), out otherLoans) || otherLoans < 0)
             {

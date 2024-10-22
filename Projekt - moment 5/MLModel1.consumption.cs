@@ -56,52 +56,48 @@ namespace Projekt___moment_5
             public float Arbetssökande { get; set; }
 
             [LoadColumn(10)]
-            [ColumnName(@"Månadsinkomst")]
-            public float Månadsinkomst { get; set; }
-
-            [LoadColumn(11)]
             [ColumnName(@"CivilståndGift")]
             public float CivilståndGift { get; set; }
 
-            [LoadColumn(12)]
+            [LoadColumn(11)]
             [ColumnName(@"CivilståndSambo")]
             public float CivilståndSambo { get; set; }
 
-            [LoadColumn(13)]
+            [LoadColumn(12)]
             [ColumnName(@"CivilståndEnsamstående")]
             public float CivilståndEnsamstående { get; set; }
 
-            [LoadColumn(14)]
+            [LoadColumn(13)]
             [ColumnName(@"Medsökande")]
             public float Medsökande { get; set; }
 
-            [LoadColumn(15)]
+            [LoadColumn(14)]
             [ColumnName(@"Barn20årEllerYngre")]
             public float Barn20årEllerYngre { get; set; }
 
-            [LoadColumn(16)]
+            [LoadColumn(15)]
             [ColumnName(@"Villa")]
             public float Villa { get; set; }
 
-            [LoadColumn(17)]
+            [LoadColumn(16)]
             [ColumnName(@"Bostadsrätt")]
             public float Bostadsrätt { get; set; }
 
-            [LoadColumn(18)]
+            [LoadColumn(17)]
             [ColumnName(@"Hyresrätt")]
             public float Hyresrätt { get; set; }
 
-            [LoadColumn(19)]
+            [LoadColumn(18)]
             [ColumnName(@"Betalningsanmärkningar")]
             public float Betalningsanmärkningar { get; set; }
 
-            [LoadColumn(20)]
+            [LoadColumn(19)]
             [ColumnName(@"AndraLån")]
             public float AndraLån { get; set; }
 
-            [LoadColumn(21)]
-            [ColumnName(@"Godkänd")]
-            public float Godkänd { get; set; }
+            [LoadColumn(20)]
+            [ColumnName(@"IsApproved")]
+            public float IsApproved { get; set; }
 
         }
 
@@ -143,9 +139,6 @@ namespace Projekt___moment_5
             [ColumnName(@"Arbetssökande")]
             public float Arbetssökande { get; set; }
 
-            [ColumnName(@"Månadsinkomst")]
-            public float Månadsinkomst { get; set; }
-
             [ColumnName(@"CivilståndGift")]
             public float CivilståndGift { get; set; }
 
@@ -176,8 +169,8 @@ namespace Projekt___moment_5
             [ColumnName(@"AndraLån")]
             public float AndraLån { get; set; }
 
-            [ColumnName(@"Godkänd")]
-            public uint Godkänd { get; set; }
+            [ColumnName(@"IsApproved")]
+            public uint IsApproved { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
@@ -248,10 +241,10 @@ namespace Projekt___moment_5
         {
             var schema = PredictEngine.Value.OutputSchema;
 
-            var labelColumn = schema.GetColumnOrNull("Godkänd");
+            var labelColumn = schema.GetColumnOrNull("IsApproved");
             if (labelColumn == null)
             {
-                throw new Exception("Godkänd column not found. Make sure the name searched for matches the name in the schema.");
+                throw new Exception("IsApproved column not found. Make sure the name searched for matches the name in the schema.");
             }
 
             // Key values contains an ordered array of the possible labels. This allows us to map the results to the correct label value.
